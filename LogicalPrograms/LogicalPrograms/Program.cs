@@ -12,11 +12,19 @@ public class Logical
         //Prime Number
         Prime prime = new Prime();
 
-      
+        //Reverse Number
+        Reverse rev = new Reverse();
+
+
         bool check = true;
         while (check)
         {
-            Console.Write("Select Number:\n1)Fibonacci Series\n2)Perfect Number\n3)Prime Number\n\n");
+            Console.Write("Select Number:\n" +
+                "1)Fibonacci Series\n" +
+                "2)Perfect Number\n" +
+                "3)Prime Number\n" +
+                "4)Reverse Number\n" +
+                "\n\n");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -28,6 +36,9 @@ public class Logical
                     break;
                 case 3:
                     prime.Checkprime();
+                    break;
+                case 4:
+                    rev.CheckReverse();
                     break;
                 default:
                     check = !check;
